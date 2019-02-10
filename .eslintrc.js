@@ -8,6 +8,7 @@ module.exports = {
   },
   env: {
     browser: true,
+    es6: true
   },
   // https://github.com/feross/standard/blob/master/RULES.md#javascript-standard-style
   extends: 'standard',
@@ -18,7 +19,7 @@ module.exports = {
   // add your custom rules here
   'rules': {
     // allow paren-less arrow functions
-    'arrow-parens': 0,
+    'arrow-parens': 1,
     // allow async-await
     'generator-star-spacing': 0,
     // allow debugger during development
