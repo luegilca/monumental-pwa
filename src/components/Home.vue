@@ -18,10 +18,7 @@ export default {
   methods: {
     changeStatus( ) {
       this.status = !this.status;
-      while( status ) {
-        setTimeout( 
-        this.getLocation( ), 3000 );
-      }
+      this.getLocation( );
     },
     getLocation( ) {
       if( navigator.geolocation ) {
