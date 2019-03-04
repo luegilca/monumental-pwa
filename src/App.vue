@@ -3,7 +3,7 @@
 </template>
 
 <script>
-  require( '../static/js/main.js' );
+  // require( '../static/js/main.js' );
 
   export default {
     name: 'app'

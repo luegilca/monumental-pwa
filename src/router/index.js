@@ -10,12 +10,12 @@ export default new Router({
   mode: 'history',
   routes: [
     {
-      path: '/',
+      path: '/login',
       name: 'Login',
       component: Login
     },
     {
-      path: '/home',
+      path: '/',
       name: 'Home',
       component: Home
     }    

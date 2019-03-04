@@ -39,52 +39,6 @@
               <div class="js-id album-item-id flex-align-center">3</div>
             </div>
           </div>
-          <div class="row margin-bottom">
-            <div class="js-monument js-item-3 col-md-4">
-              <div class="js-image card album-item" data-toggle="modal" data-target="#modal-1" style="background-image: url('./../../static/img/monuments/4.jpg')">
-                <div class="card-body">
-                </div>
-              </div>
-              <div class="js-id album-item-id flex-align-center">4</div>
-            </div>
-            <div class="js-monument js-item-4 col-md-4">
-              <div class="js-image card album-item" data-toggle="modal" data-target="#modal-1" style="background-image: url('./../../static/img/monuments/5.jpg')">
-                <div class="card-body">
-                </div>
-              </div>
-              <div class="js-id album-item-id flex-align-center">5</div>
-            </div>
-            <div class="js-monument js-item-5 col-md-4">
-              <div class="js-image card album-item" data-toggle="modal" data-target="#modal-1" style="background-image: url('./../../static/img/monuments/6.jpg')">
-                <div class="card-body">
-                </div>
-              </div>
-              <div class="js-id album-item-id flex-align-center">6</div>
-            </div>
-          </div>
-          <div class="row margin-bottom">
-            <div class="js-monument js-item-6 col-md-4">
-              <div class="js-image card album-item" data-toggle="modal" data-target="#modal-1" style="background-image: url('./../../static/img/monuments/7.jpg')">
-                <div class="card-body">
-                </div>
-              </div>
-              <div class="js-id album-item-id flex-align-center">7</div>
-            </div>
-            <div class="js-monument js-item-7 col-md-4">
-              <div class="js-image card album-item" data-toggle="modal" data-target="#modal-1" style="background-image: url('./../../static/img/monuments/8.jpg')">
-                <div class="card-body">
-                </div>
-              </div>
-              <div class="js-id album-item-id flex-align-center">8</div>
-            </div>
-            <div class="js-monument js-item-8 col-md-4">
-              <div class="js-image card album-item" data-toggle="modal" data-target="#modal-1" style="background-image: url('./../../static/img/monuments/9.jpg')">
-                <div class="card-body">
-                </div>
-              </div>
-              <div class="js-id album-item-id flex-align-center">8</div>
-            </div>
-          </div>
         </div>
         </div>
         <div id="modal-1" class="js-modal modal" tabindex="-1" role="dialog">
@@ -103,7 +57,7 @@
                         <a class="nav-link active" id="description-tab" data-toggle="tab" href="#description" role="tab" aria-controls="description" aria-selected="true">Descripción</a>
                       </li>
                       <li class="nav-item">
-                        <a class="nav-link" id="guard-tab" data-toggle="tab" href="#guard" role="tab" aria-controls="guard" aria-selected="false">Guardianes</a>
+                        <a class="nav-link" id="guard-tab" data-toggle="tab" href="#guard" role="tab" aria-controls="guard" aria-selected="false">¡Desbloquéame!</a>
                       </li>
                     </ul>
                     <div class="tab-content" id="myTabContent">
@@ -113,12 +67,17 @@
                       </div>
                       <div class="tab-pane fade" id="guard" role="tabpanel" aria-labelledby="guard-tab">
                           <div class="row">
-                            <div class="col-md-3">
-                              <div class="person-image" style="background-image: url('https://i1.wp.com/www.winhelponline.com/blog/wp-content/uploads/2017/12/user.png?fit=256%2C256&quality=100&ssl=1')"></div>
-                            </div>
-                            <div class="col-md-9">
-                              <div class="person-title">Juan Sebastian Vivero</div>
-                              <div class="person-descrition person-role">Carpintero</div>
+                            <div class="col-md-12">
+                              <div class="person-title">Contesta la siguiente pregunta</div>
+                              <div class="claim">Recuerda que debes estar cerca al monumento y contestar esta pregunta para desbloquearlo</div>
+                              <div class="person-descrition person-role question-text"></div>
+                              <br>
+                              <div align="center">
+                                <button type="button" class="btn btn-warning btn_second opt-0 button-options">a</button>
+                                <button type="button" class="btn btn-warning btn_second opt-1 button-options">b</button>
+                                <button type="button" class="btn btn-warning btn_second opt-2 button-options">c</button>
+                                <button type="button" class="btn btn-warning btn_second opt-3 button-options">d</button>
+                              </div>                              
                             </div>
                           </div>
                       </div>
@@ -138,7 +97,7 @@
                         <a class="js-route dropdown-item" href="#" data-transport="TRANSIT">En bus</a>
                       </div>
                     </div>
-                    <button type="button" class="btn btn-warning btn_second">Escanear</button>
+                    <button type="button" class="btn btn-warning btn_second button-options">Desbloquear</button>
                 </div>
                 <div class="map-container">
                   <div id="map" class="js-map no-visible"></div>

@@ -3,9 +3,9 @@ var monuments = [];
 const API_KEY = "AIzaSyC8R-YY2CjetypPOOGGZDKjrfsekASU6WI";
 
 var monuments_photos = {
-  '1': '../img/monuments/1.jpg',
-  '2': '../img/monuments/2.jpg',
-  '3': '../img/monuments/3.jpg',
+  '1': './../../static/img/monuments/1.jpg',
+  '2': './../../static/img/monuments/2.jpg',
+  '3': './../../static/img/monuments/3.jpg',
 }
 
 var map;
@@ -24,43 +24,35 @@ var bta = {lat: 4.624335, lng: -74.063644}
 var markers = []
 
 //Initialize Firebase
-var config = {
-  apiKey: "AIzaSyDXTZFAW5FJBrndTfydPX_K8OQjLu7C488",
-  authDomain: "datos-dc-2018.firebaseapp.com",
-  databaseURL: "https://datos-dc-2018.firebaseio.com",
-  projectId: "datos-dc-2018",
-  storageBucket: "datos-dc-2018.appspot.com",
-  messagingSenderId: "364966521199"
-};
 // var config = {
-//   apiKey: "AIzaSyBrlpibpfDag-kkWdO1SE_x6Yvj_0_Zj1A",
-//   authDomain: "monumental-pwa.firebaseapp.com",
-//   databaseURL: "https://monumental-pwa.firebaseio.com",
-//   projectId: "monumental-pwa",
-//   storageBucket: "monumental-pwa.appspot.com",
-//   messagingSenderId: "662553488877"
+//   apiKey: "AIzaSyDXTZFAW5FJBrndTfydPX_K8OQjLu7C488",
+//   authDomain: "datos-dc-2018.firebaseapp.com",
+//   databaseURL: "https://datos-dc-2018.firebaseio.com",
+//   projectId: "datos-dc-2018",
+//   storageBucket: "datos-dc-2018.appspot.com",
+//   messagingSenderId: "364966521199"
 // };
-firebase.initializeApp(config);
-
-const database = firebase.database();
-// database.ref().on('value', function(d){
-//   console.log( d.val( ) );
-// })
-// console.log( 'finished' );
+var config = {
+  apiKey: "AIzaSyBrlpibpfDag-kkWdO1SE_x6Yvj_0_Zj1A",
+  authDomain: "monumental-pwa.firebaseapp.com",
+  databaseURL: "https://monumental-pwa.firebaseio.com",
+  projectId: "monumental-pwa",
+  storageBucket: "monumental-pwa.appspot.com",
+  messagingSenderId: "662553488877"
+};
+firebase.initializeApp( config );
 
 function getMonuments() {
-  return firebase.database().ref().on('value', function(snapshot) {
+  return firebase.database().ref('monuments').on('value', function(snapshot) {
     console.log(snapshot.val())
     monuments = [];
     snapshot.val().map(item => {
-      if(item.CLASIFICACION != "CAMPANA"){
-        monuments.push(item)
-      }
+    monuments.push(item)
 
     for (var i = 0; i < monuments.length; i++) {
        var monument = monuments[i];
-       //var url = "url('" + monument.url + "')";
-       //$('.js-item'+i).find('js-image').data('' monuments_photos[i]);
+       var url = "url('" + monument.url + "')";
+       $('.js-item'+i).find('js-image').data('' + monuments_photos[i]);
        var itemHTML = $('.js-item-'+i);
        itemHTML.find('.js-id').text(monument.OBJECTID);
        itemHTML.data('title', monument.TITULO);
@@ -69,6 +61,13 @@ function getMonuments() {
        itemHTML.data('id', monument.OBJECTID);
        itemHTML.data('image', monuments_photos[monument.OBJECTID]);
        itemHTML.data('text', monument.TEXTO);
+       itemHTML.data('question', monument.PREGUNTA);
+       itemHTML.data('ans', monument.RESPUESTA);
+       itemHTML.data('op0', monument.OPCIONES[0]);
+       itemHTML.data('op1', monument.OPCIONES[1]);
+       itemHTML.data('op2', monument.OPCIONES[2]);
+       itemHTML.data('op3', monument.OPCIONES[3]);
+       
 
 
        if (monument.enable) {
@@ -82,7 +81,7 @@ function getMonuments() {
       }
     })
   })
-}
+};
 
 function initMap() {
   map = new google.maps.Map(document.getElementById('map'), {
@@ -112,7 +111,7 @@ function initMap() {
     // Browser doesn't support Geolocation
     console.log("not support");
   }
-}
+};
 
 function events_marker(marker,mode) {
 	if (!(typeof marker === "undefined")){
@@ -120,7 +119,7 @@ function events_marker(marker,mode) {
 		    getRoute(marker,mode);
 		});
 	}
-}
+};
 
 function setCookie(value) {
   document.cookie = "currentPosition=" + value;
@@ -142,7 +141,7 @@ function getRoute( marker,mode){
 	      directionsRenderer.setDirections(result);
 	   }
   });
-}
+};
 
 function makeMarkerImage( imageURL){
 	var image = {
@@ -153,7 +152,7 @@ function makeMarkerImage( imageURL){
 					scaledSize: new google.maps.Size(30, 30)
 				}
 	return image;
-}
+};
 
 function addMarkersToMap( arrayMarkers ){
 	for (var i = 0; i < arrayMarkers.length; i++) {
@@ -189,9 +188,13 @@ function eventListeners() {
     $('.js-modal-title').text(monument.data('title'));
     $('.js-modal-id').text(monument.data('id'));
     $('.description').text(monument.data('text'));
+    $('.question-text').text(monument.data('question'));
+    $('.opt-0').text(monument.data('op0'));
+    $('.opt-1').text(monument.data('op1'));
+    $('.opt-2').text(monument.data('op2'));
+    $('.opt-3').text(monument.data('op3'));
     $('.js-modal').data('lat', monument.data('lat'));
     $('.js-modal').data('lng', monument.data('lng'));
-    console.log(monument.data('image'));
     $('.js-modal-image').css('background-image', "url('" + monument.data('image') + "')");
   });
 
