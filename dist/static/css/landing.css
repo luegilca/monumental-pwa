@@ -1,0 +1,283 @@
+.full-page {
+	padding: 0;
+}
+
+section {
+	max-width: 1200px;
+	margin: auto;
+}
+
+.navbar {
+	align-items: flex-start;
+	justify-content: space-between;
+	width: 100%;
+	padding-top: 2rem;
+	padding-right: 2rem;
+}
+
+.nav-actions {
+	display: flex;
+	align-items: center;
+	flex-flow: row nowrap;
+}
+
+.navbar-link {
+	text-transform: uppercase;
+	font-weight: 800;
+	margin-left: 1rem;
+	padding: 1rem .5rem;
+	letter-spacing: .3rem;
+	color: #fff;
+	cursor: pointer;
+	transition: all .3s ease-in-out;
+}
+
+.navbar-link:hover {
+	color: #512DA8;
+}
+
+.brand {
+	background-image: url('./../img/logo-2.png');
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	height: 70px;
+	width: 200px;
+}
+
+.landing-header {
+	height: 100vh;
+	background-image: url('https://fthmb.tqn.com/2U2l-9oE-4qj8D7-qwlgwWMSBbM=/1791x1200/filters:fill(auto,1)/5796344537_8654d3eb39_o-56a4129f3df78cf77280c5d5.jpg');
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+}
+
+.header-container-info {
+	display: flex;
+	justify-content: flex-end;
+	color: #fff;
+	align-content: flex-end;
+	height: 60vh;
+	box-sizing: border-box;
+    padding: 2rem 7rem;
+}
+
+.header-info {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+}
+
+.header-icon {
+	margin-left: .5rem;
+}
+
+.section-title {
+	font-size: 2rem;
+	font-weight: 800;
+	text-align: center;
+	margin-top: 2.5rem;
+}
+
+.section-subtitle {
+	text-align: center;
+	color: #757575;
+}
+
+.about {
+	margin-bottom: 3rem;
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+.panel-info {
+	padding: 1rem 1rem 2rem;
+	margin-top: 3rem;
+	text-align: center;
+	cursor: pointer;
+	border-top: none;
+	border-radius: 20px;
+	transition: all .3s ease-in-out;
+}
+
+.panel-info:hover {
+	box-shadow: 0px 50px 125px #888888;
+}
+
+.panel-icon {
+	font-size: 4rem;
+	color: #7B1FA2;
+}
+
+.panel-title {
+	font-weight: 800;
+	margin-top: 1rem;
+	font-size: 1.25rem;
+	margin-bottom: .5rem;
+}
+
+.panel-description {
+	color: #757575;
+	max-width: 300px;
+    margin: auto;
+}
+
+.person-image {
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	width: 80px;
+	height: 80px;
+	border-radius: 50%;
+}
+
+.person-description {
+	text-align: left;
+}
+
+.person-description:hover {
+	color: #ffffff;
+}
+
+.person-role {
+	text-transform: uppercase;
+	letter-spacing: .1rem;
+}
+
+.person-title {
+	font-weight: 800;
+	font-size: 1.25rem;
+	letter-spacing: .06rem;
+}
+
+.person-panel {
+	border: 1px solid #EDE8E8;
+	text-align: left;
+}
+
+.person-panel:hover {
+	background-color: #7B1FA2;
+	border: none;
+	color: #fff;
+}
+
+.nav-btn {
+	background-color: #7B1FA2;
+	box-shadow: 0px 50px 125px #888888;
+	color: #fff;
+	max-width: 150px;
+	border-radius: 30px;
+	transition: all .3s ease-in-out;
+}
+
+.nav-btn:hover {
+	color: #fff;
+	background-color:  #D81B60;
+}
+
+.header-subtitle {
+	font-size: 2rem;
+	margin: 1rem 0;
+	font-weight: 800;
+}
+
+.header-title {
+	font-size: 3rem;
+	font-weight: 800;
+	letter-spacing: .1rem;
+}
+
+.navBar {
+	margin-top: 15px;
+	width: 100%;
+	height: 80px;
+}
+
+.nav-bar-title {
+	margin-left: 15px;
+	margin-top: 10px;
+}
+
+.nav-bar-button {
+	width: 46%;
+	margin-top: 15px;
+}
+
+.nav-bar-button:last {
+	margin-left: 2%;
+}
+
+.landingContainer{
+	height: calc(100vh - 80px);
+	background-image: url("../img/landingImage.jpg");
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+#topLabel {
+  position: absolute;
+  top: 15%;
+  left: 20%;
+	font-size: 38px;
+}
+
+#landingImage{
+	display: flex;
+	justify-content: flex-end;
+	align-items: flex-end;
+	flex-direction: column;
+  position: absolute;
+  height: 60%;
+  width: 60%;
+  top: 20%;
+  left: 25%;
+}
+
+#landingImageContent {
+	display: flex;
+	flex-direction: column;
+	position: relative;
+	right: 5%;
+	color: white;
+}
+
+#landingSpanTitle {
+	font-size: 56px;
+}
+
+#landingSpanText {
+	text-align: justify;
+  text-justify: inter-word;
+	font-size: 40px;
+	width: 100%;
+}
+
+#startButton {
+	margin-top: 10px;
+	width: 45%;
+	font-size: 30px;
+}
+
+#aboutTitle {
+	font-size: 70px;
+	margin-top: 50px;
+	margin-left: 75px;
+	margin-bottom: 30px;
+}
+
+.about-text {
+	text-align: center;
+	height: calc(20vh);
+}
+
+.about-text-column p {
+	text-align: justify;
+  text-justify: inter-word;
+  text-align-last: center;
+	padding-left: 20%;
+	padding-right: 20%;
+}
+

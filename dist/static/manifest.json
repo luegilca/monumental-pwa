@@ -1,0 +1,31 @@
+{
+  "name": "Monumental",
+  "short_name": "Monumental WebApp",
+  "icons": [
+    {
+      "src": "/static/img/icons/obelisk64x64.png",
+      "sizes": "64x64",
+      "type": "image/png"
+    },
+    {
+      "src": "/static/img/icons/obelisk128x128.png",
+      "sizes": "128x128",
+      "type": "image/png"
+    },
+    {
+      "src": "/static/img/icons/obelisk256x256.png",
+      "sizes": "256x256",
+      "type": "image/png"
+    },
+    {
+      "src": "/static/img/icons/obelisk512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "start_url": "/",
+  "display": "fullscreen",
+  "orientation": "portrait",
+  "background_color": "#000000",
+  "theme_color": "#4DBA87"
+}
