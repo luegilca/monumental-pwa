@@ -1,0 +1,243 @@
+* {
+  font-family: 'Dosis', sans-serif;
+}
+
+#map {
+ height: 400px;
+ width: 100%;
+}
+/* HELPERS */
+.full-vh {
+  height: 100vh;
+  padding: 0;
+}
+
+.margin-bottom {
+  margin-bottom: 2rem; 
+}
+
+.map-container {
+  padding: 0 3rem;
+}
+
+/*SIDE PANEL TABS*/
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+  border-left: 5px solid;
+  border-radius: 0;
+  font-weight: 800;
+  background-color: transparent;
+  color: #f8cf09;
+}
+
+.flex-align-center {
+  display: flex;
+  align-items: center;
+}
+
+.no-wrap {
+  flex-wrap: nowrap;
+}
+
+.profile-container {
+  flex-flow: column nowrap;
+  padding: 1.5rem 21px 1rem;
+  margin-bottom: 2rem;
+  border-bottom: 1px solid #f8cf09;
+}
+
+.profile-name {
+  text-align: center;
+  color: #EDE8E8;
+  margin-top: 1rem;
+  font-weight: 800;
+}
+
+.left-panel-head {
+  padding: 0 1rem;
+}
+
+.album-item {
+  filter: grayscale(100%);
+  box-shadow: 0px 3px 15px #888888;
+  cursor: pointer;
+  margin: 0 5px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 300px;
+  border: none;
+  position: relative;
+  opacity: .93;
+}
+
+.js-monument:hover {
+  transform: scale(1.1);
+  transition: all .3s ease-in-out;
+}
+
+.album-item-id {
+  border-radius: 50%;
+  justify-content: center;
+  height: 40px;
+  width: 40px;
+  color: #000;
+  position: absolute;
+  top: calc(50% - 20px);
+  right: 0;
+  background-color: #f8cf09;
+}
+
+.tab-icon {
+  margin-right: .5rem;
+}
+
+.nav-link {
+  margin: .45rem 0;
+  padding-left: 2rem;
+  font-size: 1.25rem;
+  color: #f8cf09;
+  transition: all .3s ease-in-out;
+}
+
+.nav-link:hover {
+  color: #EDE8E8;
+}
+
+.profile-image {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+}
+
+.left-panel {
+  padding: 2rem 1rem 1rem 4rem
+}
+
+.profile-panel {
+  background-image:  url('./../img/fondomorado.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+
+.main-panel {
+  padding: 6rem 3rem 4rem;
+  background-color: #EDE8E8;
+  overflow: auto;
+  max-height: 100vh;
+}
+
+button.modal-close-btn {
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 1rem;
+  padding-top: .45rem;
+}
+
+.item-discover {
+  filter: grayscale(0%);
+  opacity: 1;
+}
+
+.modal-img {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  /* height: 250px; */
+  width: 200px;
+  position: relative;
+}
+
+.modal__head {
+  display: flex;
+  padding: 1rem 5rem;
+  position: relative;
+}
+
+.modal__text {
+  margin-left: 1.5rem;
+  width: calc(100% - 224px)
+}
+
+.modal__title {
+  color: #f8cf09;
+  font-weight: 800;
+  font-size: 2rem;
+}
+
+.modal__item-id {
+  width: 60px;
+  height: 60px;
+  left: -25px;
+  font-weight: 800;
+  font-size: 1.15rem;
+  letter-spacing: .1rem;
+}
+
+.modal__actions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 5rem;
+  width: 216px;
+  margin-bottom: 2rem;
+}
+
+.btn_second {
+  margin-left: 1rem;
+  color: #fff;
+}
+
+.modal-content {
+  overflow: hidden;
+  min-height: 500px;
+}
+
+.modal-body {
+  overflow: auto;
+}
+
+.no-visible {
+  display: none;
+}
+
+.nav-tabs {
+  border: none;
+}
+
+.nav-item {
+  width: 50%
+}
+
+.tab-content {
+  padding: 1rem 0 0 1rem;
+}
+
+.description{
+  text-align: justify;
+}
+
+.button-options{
+  color: black;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: pre-line;
+  margin: 5px 3px 5px 3px;
+  width: 100%;
+}
+.claim {
+  font-style: italic;
+  font-size: smaller;
+  text-align: end;
+  padding: 10px 0px 10px 0px;
+}
+
+@media (min-width: 576px) {
+  .modal-dialog {
+    max-width: 750px;
+  }
+}
