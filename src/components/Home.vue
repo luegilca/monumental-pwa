@@ -73,10 +73,10 @@
                               <div class="person-descrition person-role question-text"></div>
                               <br>
                               <div align="center">
-                                <button type="button" class="btn btn-warning btn_second opt-0 button-options">a</button>
-                                <button type="button" class="btn btn-warning btn_second opt-1 button-options">b</button>
-                                <button type="button" class="btn btn-warning btn_second opt-2 button-options">c</button>
-                                <button type="button" class="btn btn-warning btn_second opt-3 button-options">d</button>
+                                <button type="button" class="btn btn-warning btn_second opt-0 button-options" data-option="0">a</button>
+                                <button type="button" class="btn btn-warning btn_second opt-1 button-options" data-option="1">b</button>
+                                <button type="button" class="btn btn-warning btn_second opt-2 button-options" data-option="2">c</button>
+                                <button type="button" class="btn btn-warning btn_second opt-3 button-options" data-option="3">d</button>
                               </div>                              
                             </div>
                           </div>
@@ -103,6 +103,26 @@
                   <div id="map" class="js-map no-visible"></div>
                 </div>
                 <div id="directionsPanel"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="success" class="modal" tabindex="-1" role="dialog">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <div class="person-title">¡Felicidades! Has desbloqueado una nueva lámina</div>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <div class="col-md-12" align="center">                        
+                  <div class="person-descrition person-role after-unlock"></div>
+                </div>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary close-unlocked" data-dismiss="modal">Cerrar</button>
               </div>
             </div>
           </div>

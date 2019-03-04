@@ -67,6 +67,7 @@ function getMonuments() {
        itemHTML.data('op1', monument.OPCIONES[1]);
        itemHTML.data('op2', monument.OPCIONES[2]);
        itemHTML.data('op3', monument.OPCIONES[3]);
+       itemHTML.data('after', monument.DESPUES);
        
 
 
@@ -195,6 +196,8 @@ function eventListeners() {
     $('.opt-3').text(monument.data('op3'));
     $('.js-modal').data('lat', monument.data('lat'));
     $('.js-modal').data('lng', monument.data('lng'));
+    $('.js-modal').data('ans', monument.data('ans'));
+    $('.after-unlock').text(monument.data('after'));
     $('.js-modal-image').css('background-image', "url('" + monument.data('image') + "')");
   });
 
@@ -226,6 +229,19 @@ function eventListeners() {
     var section = $(this).data('section');
     scrollToSection(section);
   });
+
+  for (let i = 0; i < 3; i++) {
+    $('.opt-'+i).on('click', function( ) {
+      var option = $(this).data('option');
+      var monument = $(this).closest('.js-modal');
+      if( option === monument.data('ans') ) {
+        $('#modal-1').modal( 'toggle' );
+        $('#success').modal( 'toggle' );
+      }
+      else
+        console.log( 'Incorrect' );
+    });    
+  }
 }
 
 function geolocationValidation(monumentPos){
