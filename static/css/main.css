@@ -197,6 +197,11 @@ button.modal-close-btn {
   min-height: 500px;
 }
 
+.modal-content2 {
+  overflow: hidden;
+  min-height: 200px;
+}
+
 .modal-body {
   overflow: auto;
 }

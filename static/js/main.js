@@ -68,6 +68,7 @@ function getMonuments() {
        itemHTML.data('op2', monument.OPCIONES[2]);
        itemHTML.data('op3', monument.OPCIONES[3]);
        itemHTML.data('after', monument.DESPUES);
+       monument.enable = false;
        
 
 
@@ -80,6 +81,7 @@ function getMonuments() {
         itemHTML.find('.js-image').addClass('album-item');
        }
       }
+      console.log(monuments);
     })
   })
 };
@@ -197,6 +199,7 @@ function eventListeners() {
     $('.js-modal').data('lat', monument.data('lat'));
     $('.js-modal').data('lng', monument.data('lng'));
     $('.js-modal').data('ans', monument.data('ans'));
+    $('.js-modal').data('id', monument.data('id') - 1 );
     $('.after-unlock').text(monument.data('after'));
     $('.js-modal-image').css('background-image', "url('" + monument.data('image') + "')");
   });
@@ -230,23 +233,30 @@ function eventListeners() {
     scrollToSection(section);
   });
 
-  for (let i = 0; i < 3; i++) {
+  for (let i = 0; i < 4; i++) {
     $('.opt-'+i).on('click', function( ) {
       var option = $(this).data('option');
       var monument = $(this).closest('.js-modal');
       if( option === monument.data('ans') ) {
         $('#modal-1').modal( 'toggle' );
         $('#success').modal( 'toggle' );
+        unlock( monument.data('id') );
       }
       else
         console.log( 'Incorrect' );
-    });    
+    });
   }
 }
 
 function geolocationValidation(monumentPos){
   var distance = google.maps.geometry.spherical.computeDistanceBetween (monumentPos.position, positionMarker.position);
   return distance;
+}
+
+function unlock( index ) {
+  $('.js-item-' + index).find('.js-image').addClass('item-discover');
+  $('.js-item-' + index).find('.js-image').addClass('animated');
+  $('.js-item-' + index).find('.js-image').addClass('flipInY');
 }
 
 var rad = function(x) {
